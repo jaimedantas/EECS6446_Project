@@ -4,4 +4,3 @@ Welcome to `EECS6446` autoscaling project. In this project you will deploy a sam
 microservice-based application on a `Kubernetes` cluster dedicated to you and create
 autoscaling strategies to handle changes in load applied to the cluster.
 
-
