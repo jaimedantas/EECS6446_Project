@@ -8,8 +8,8 @@ Here is a table of contents for this tutorial:
 
 | No. | Topic |
 |-----|-------|
-|1    | [Requirements](tutorials/Requirements.md) |
-|2    | Kubernetes Installation |
+|1    | [Requirements, SSH, and Initial Setup](tutorials/01-requirements.md) |
+|2    | [Installation of Kubernetes, Kubectl, and Other Tools](tutorials/02-kubernetes.md) |
 |3    | Microservice Deployment |
 |4    | Interacting With and Testing The Load Generator |
 |5    | Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator |

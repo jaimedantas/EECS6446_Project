@@ -25,11 +25,11 @@ To ssh onto the master or worker, use the default `ubuntu` user:
 
 ```sh
 # ssh onto the master
-ssh ubuntu@10.1.1.1
+$ ssh ubuntu@10.1.1.1
 # ssh onto the slave
-ssh ubuntu@10.1.1.2
+$ ssh ubuntu@10.1.1.2
 # ssh onto master with another ssh key
-ssh ubuntu@10.1.1.1 -i ~/.ssh/my_other_ssh_key
+$ ssh ubuntu@10.1.1.1 -i ~/.ssh/my_other_ssh_key
 ```
 
 ## Initial Setup
@@ -62,3 +62,15 @@ PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
 64 bytes from 10.1.1.2: icmp_seq=7 ttl=64 time=0.346 ms
 64 bytes from 10.1.1.2: icmp_seq=8 ttl=64 time=0.362 ms
 ```
+
+## Firewall Configurations
+
+In case you needed to do firewall configurations yourself, open the following ports:
+
+- `TCP` port `6443` for Kubernetes API
+- `UDP` port `8472` for Flannel VXLAN
+- `TCP` port `10250` for kubelet
+- `TCP` port `80` for the application
+- `TCP` port `9090` for prometheus
+- `TCP` port `8091` for locust
+- `TCP` port `3000` for grafana
