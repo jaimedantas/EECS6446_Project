@@ -19,6 +19,10 @@ different location, you need to use the `-i` option for all ssh commands). Also,
 the provided VMs are `10.1.1.1` (master) and `10.1.1.2` (worker). We will be using these assumptions
 throughout the tutorial.
 
+**Table of Contents**
+- TOC
+{:toc}
+
 ## SSH Access
 
 To ssh onto the master or worker, use the default `ubuntu` user:
