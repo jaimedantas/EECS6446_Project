@@ -1,6 +1,13 @@
 # Kubernetes
 
+[Kubernetes](https://kubernetes.io/), also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+In recent years, it has become the de-facto standard for cluster management in the cloud. We will be using kubernetes to manage our infrastructure and deploy
+our applications. In this section of the tutorial, you will learn to deploy kubernetes to a create a cluster of VMs that can be managed from a single point
+which is the master node.
+
 ## Installing Required Tools
+
+Before installing Kubernetes, we need to install some tools that we will be using later on.
 
 ### Docker
 
@@ -137,6 +144,14 @@ Git Commit: 95fc8b074a6e0ea48ea03a695491e955e32452ea
 
 The error shown for `kubectl` is not important, as we have not yet installed our kubernetes cluster.
 
+### Optional Tools
+
+For special installations, you might need `skaffold` which can be installed using the following command. However, for most students this step is not required.
+
+```sh
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && sudo install skaffold /usr/local/bin/ && rm skaffold
+```
+
 ## Installing Kubernetes
 
 For this project, we will be using a lightweight distribution of kubernetes called [k3s](https://k3s.io/).
@@ -271,7 +286,7 @@ Output: [INFO]  Finding release for channel stable
 We should also be able to see the new worker node added to the cluster by running the following on the `master`:
 
 ```sh
-$ kubectl get nodes -o wide
+(master) $ kubectl get nodes -o wide
 NAME                   STATUS   ROLES                  AGE   VERSION        INTERNAL-IP     EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
 ktest-eecs6446         Ready    control-plane,master   20m   v1.20.0+k3s2   10.1.1.1        <none>          Ubuntu 20.04.1 LTS   5.4.0-56-generic   containerd://1.4.3-k3s1
 ktest2-eecs6446        Ready    <none>                 31s   v1.20.0+k3s2   10.1.1.2        10.1.1.2        Ubuntu 20.04.1 LTS   5.4.0-56-generic   containerd://1.4.3-k3s1
@@ -279,7 +294,9 @@ ktest2-eecs6446        Ready    <none>                 31s   v1.20.0+k3s2   10.1
 
 Notice the `Ready` status for both VMs.
 
-Now that our cluster is set up and ready to use, we can proceed to the next step.
+Now that our cluster is set up and ready to use, we can proceed to the next step. You can check
+out some of the most used `kubectl` commands on [their documentations](https://kubernetes.io/docs/reference/kubectl/overview/).
+You can also take a look at the [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 
 ## References
 
