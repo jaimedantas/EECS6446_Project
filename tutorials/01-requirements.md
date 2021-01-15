@@ -25,11 +25,11 @@ To ssh onto the master or worker, use the default `ubuntu` user:
 
 ```sh
 # ssh onto the master
-ssh ubuntu@10.1.1.1
+$ ssh ubuntu@10.1.1.1
 # ssh onto the slave
-ssh ubuntu@10.1.1.2
+$ ssh ubuntu@10.1.1.2
 # ssh onto master with another ssh key
-ssh ubuntu@10.1.1.1 -i ~/.ssh/my_other_ssh_key
+$ ssh ubuntu@10.1.1.1 -i ~/.ssh/my_other_ssh_key
 ```
 
 ## Initial Setup
