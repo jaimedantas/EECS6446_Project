@@ -162,18 +162,20 @@ For this project, we will be using a lightweight distribution of kubernetes call
 K3s is a lightweight distribution of Kubernetes created at [Rancher Labs](https://rancher.com/). Basically, it is a complete 
 Kubernetes distribution, but they combined all processes into a single binary, added cross-compilation for ARM, dropped a lot of 
 extra features that you don’t normally use and bundled some extra user-space tools. To install k3s on the master, run the
-following commands on the master VM:
+following commands on the master VM (update `MASTER_IP` with the IP of your master node):
 
 ```sh
 # run the following commands on your master VM
 # create kubeconfig directory
 mkdir ~/.kube
+# master information
+export MASTER_IP=10.1.1.1
 # install k3s
 k3sup install \
   --local \
   --k3s-channel stable \
   --local-path ~/.kube/config \
-  --k3s-extra-args '--no-deploy traefik --write-kubeconfig-mode 644' \
+  --k3s-extra-args "--node-external-ip $MASTER_IP --node-ip $MASTER_IP --no-deploy traefik --write-kubeconfig-mode 644" \
   --print-command
 ```
 
