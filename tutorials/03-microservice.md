@@ -23,7 +23,7 @@ publicly available docker containers.
 
 ```sh
 # deploy the default manifest
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/release/kubernetes-manifests.yaml
+kubectl apply -f https://raw.githubusercontent.com/pacslab/EECS6446_Project/main/files/online-boutique.yaml
 ```
 
 It may take up to 10 minutes for the deployment to be up and running. You can
@@ -49,13 +49,16 @@ loadgenerator-7747b67b5-s8t5c            1/1     Running   3          3m47s
 ```
 
 After the all the services are up and running, you can open the deployed
-website by going to the following address:
-
-```
-http://MASTER_IP
-```
+website by going to the address `http://MASTER_IP`. You can also open
+the load generator UI by going to the address `http://MASTER_IP:8089`.
 
 Note that you need to replace `MASTER_IP` with the IP of your master node.
+
+If everything has worked well, you will be able to open the online store
+deployed and see the load generator plots and statistics shown. We will later
+on use the load generator API to change the number of simulated users and
+query the quality of service statistics from the load generator. You are now
+ready to move on to the next step.
 
 ## References
 
