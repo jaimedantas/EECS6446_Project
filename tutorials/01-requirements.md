@@ -11,6 +11,11 @@ Remote Development via SSH. To use this feature, you need to install the
 extension. You can follow the VSCode tutorials to connect to the `master VM` to follow with the
 tutorials. The VMs used in this tutorial need to be a debian-based distribution and would
 preferably be `Ubuntu 18.04` or `Ubuntu 20.04` with the standard `bash`.
+We also recommend the installation of the following extensions:
+
+- `Python` by `Microsoft`
+- `Jupyter` by `Microsoft`
+- `Kubernetes` by `Microsoft`
 
 For this tutorial,
 imagine the provided ssh private and public key is stored in `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`
