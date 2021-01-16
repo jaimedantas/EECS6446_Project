@@ -68,7 +68,7 @@ sum(
 
 You can also see the result of this query in time going to the `graph` tab:
 
-[![Screenshot of load generator](./img/prometheus01.png)](./img/prometheus01.png)
+[![Screenshot of load generator](./img/prometheus-01.png)](./img/prometheus-01.png)
 
 ## Get The Memory Usage of Pods
 
@@ -98,7 +98,7 @@ sum(
 
 The graph for this query would be similar to the following image:
 
-[![Screenshot of load generator](./img/prometheus02.png)](./img/prometheus02.png)
+[![Screenshot of load generator](./img/prometheus-02.png)](./img/prometheus-02.png)
 
 ## Get Memory Usage of All Deployments
 

@@ -7,14 +7,14 @@ with some additional metrics being reported called [pacs locust](https://github.
 `http://MASTER_IP:8089`. You will be faced with a webpage similar to the
 following:
 
-[![Screenshot of load generator](./img/locust01.png)](./img/locust01.png)
+[![Screenshot of load generator](./img/locust-01.png)](./img/locust-01.png)
 
 For now just change spawn rate to `10` and leave everything else as is and
 click on `start swarming`. You will be faced with a page showing charts and
 statistics about the workload. In the `charts` tab you should see a page similar
 to the following:
 
-[![Screenshot of load generator](./img/locust02.png)](./img/locust02.png)
+[![Screenshot of load generator](./img/locust-02.png)](./img/locust-02.png)
 
 And the statistics tab will show you several statistics about response time
 associated with different endpoints of the website.
