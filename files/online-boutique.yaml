@@ -484,7 +484,8 @@ spec:
       - name: main
         # CHANGED:
         # image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.2.1
-        image: nimademoapps/loadgenerator:v0.1.4-73-g7a2a0d7-dirty@sha256:8ca8ab26e7e6a54958e1d5d55160ce35b6f245dd62b154021519e072b2dc675a
+        # image: nimademoapps/loadgenerator:v0.1.4-73-g7a2a0d7-dirty@sha256:8ca8ab26e7e6a54958e1d5d55160ce35b6f245dd62b154021519e072b2dc675a
+        image: ghcr.io/nimamahmoudi/boutiqueloadgen:v0.1.4-pacs5
         ports:
         - containerPort: 8089
         env:
