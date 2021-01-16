@@ -78,3 +78,18 @@ In case you needed to do firewall configurations yourself, open the following po
 - `TCP` port `9090` for prometheus
 - `TCP` port `8091` for locust
 - `TCP` port `3000` for grafana
+
+## Anaconda Installation
+
+In this project, we will be using Python for interacting with our cluster. Using other
+programming languages is also possible, but might need additional setup from you. You
+can install [Anaconda](https://docs.conda.io/en/latest/) to act as the environment manager on your cluster.
+
+```sh
+# download miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+# install miniconda using non-interactive mode
+bash ~/miniconda.sh -b -p $HOME/miniconda
+# add bash hook for conda
+echo 'eval "$(~/miniconda/bin/conda shell.bash hook)"' >> ~/.bashrc && source ~/.bashrc
+```
