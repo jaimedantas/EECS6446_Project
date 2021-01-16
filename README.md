@@ -11,7 +11,7 @@ Here is a table of contents for this tutorial:
 |1    | [Requirements, SSH, and Initial Setup](tutorials/01-requirements.md) |
 |2    | [Installation of Kubernetes, Kubectl, and Other Tools](tutorials/02-kubernetes.md) |
 |3    | [Microservice Deployment](tutorials/03-microservice.md) |
-|4    | Interacting With and Testing The Load Generator |
+|4    | [Interacting With and Testing The Load Generator](tutorials/04-loadgenerator.md) |
 |5    | Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator |
 |6    | Interacting With The Monitoring Stack |
 |7    | Testing With The Horizontal Pod Autoscaler |
