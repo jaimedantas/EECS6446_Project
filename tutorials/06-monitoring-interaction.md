@@ -42,16 +42,39 @@ these queries using the [prometheus client library](https://prometheus.io/docs/i
 for your language of choice. You may also look at a list of metrics available on prometheus to see what other
 metrics are available to you.
 
-## Get List of Pods
+## Get Pod Count For All Deployments
 
-You can use the following to query a list of pods running in a `deployment` called `frontend`:
+You can use the following to query a list of pods running in all deployments using:
 
 ```promql
-sum(
-    kube_pod_container_resource_requests_cpu_cores{cluster="", namespace="default"}
-  * on(namespace,pod)
-    group_left(workload, workload_type) namespace_workload_pod:kube_pod_owner:relabel{cluster="", namespace="default", workload="frontend", workload_type="deployment"}
-) by (pod)
+count(kube_pod_info{namespace="default"}) by (created_by_kind,created_by_name)
+```
+
+The result would be similar to the following (we manually scaled `frontend` to 3 for this example):
+
+```
+{created_by_kind="ReplicaSet",created_by_name="adservice-5f6f7c76f5"}	1
+{created_by_kind="ReplicaSet",created_by_name="checkoutservice-85d4b74f95"}	1
+{created_by_kind="ReplicaSet",created_by_name="currencyservice-6d7f8fc9fc"}	1
+{created_by_kind="ReplicaSet",created_by_name="paymentservice-98cb47fff"}	1
+{created_by_kind="ReplicaSet",created_by_name="redis-cart-74594bd569"}	1
+{created_by_kind="DaemonSet",created_by_name="svclb-frontend-external"}	2
+{created_by_kind="ReplicaSet",created_by_name="frontend-6b64dc9665"}	3
+{created_by_kind="ReplicaSet",created_by_name="loadgenerator-68854444b4"}	1
+{created_by_kind="DaemonSet",created_by_name="svclb-loadgenerator"}	2
+{created_by_kind="ReplicaSet",created_by_name="cartservice-675b6659c8"}	1
+{created_by_kind="ReplicaSet",created_by_name="emailservice-798f4f5575"}	1
+{created_by_kind="ReplicaSet",created_by_name="productcatalogservice-7f857c47f"}	1
+{created_by_kind="ReplicaSet",created_by_name="recommendationservice-5bf5bcbbdf"}	1
+{created_by_kind="ReplicaSet",created_by_name="shippingservice-75f7f9dc6c"}	1
+```
+
+The `created_by_name` returned always starts with the name of the deployment. You can
+use this to automate this process. To manually change the number of pods running
+a specific service, you can use the following command:
+
+```sh
+kubectl scale --replicas=3 deploy/frontend
 ```
 
 ## Get The CPU Usage of Pods
