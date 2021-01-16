@@ -10,7 +10,7 @@ for an introduction to prometheus, how it works, and how it can be deployed.
 However, note that the installation procedure in the video is outdated, so
 use the deployment outlined in this tutorial to deploy the monitoring infrastructure.
 
-- [How Prometheus Monitoring works | Prometheus Architecture explained](https://youtu.be/h4Sl21AKiDg)
+- [How Prometheus Monitoring works - Prometheus Architecture explained](https://youtu.be/h4Sl21AKiDg)
 - [Setup Prometheus Monitoring on Kubernetes using Helm and Prometheus Operator](https://youtu.be/QoDqxm7ybLc)
 
 **Table of Contents**
