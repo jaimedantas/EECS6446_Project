@@ -26,7 +26,7 @@ publicly available docker containers.
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/release/kubernetes-manifests.yaml
 ```
 
-It may take up to 10 minutes for the deployment to be up and ready. You can
+It may take up to 10 minutes for the deployment to be up and running. You can
 wait for all pods to go to the `Running` state using the following command:
 
 ```console
@@ -47,6 +47,15 @@ cartservice-675b6659c8-mcz6x             1/1     Running   0          3m47s
 adservice-5f6f7c76f5-82vz2               1/1     Running   0          3m46s
 loadgenerator-7747b67b5-s8t5c            1/1     Running   3          3m47s
 ```
+
+After the all the services are up and running, you can open the deployed
+website by going to the following address:
+
+```
+http://MASTER_IP
+```
+
+Note that you need to replace `MASTER_IP` with the IP of your master node.
 
 ## References
 
