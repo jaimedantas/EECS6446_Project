@@ -84,6 +84,7 @@ In case you needed to do firewall configurations yourself, open the following po
 In this project, we will be using Python for interacting with our cluster. Using other
 programming languages is also possible, but might need additional setup from you. You
 can install [Anaconda](https://docs.conda.io/en/latest/) to act as the environment manager on your cluster.
+Run the following on your `master` node:
 
 ```sh
 # download miniconda

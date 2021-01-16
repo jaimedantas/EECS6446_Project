@@ -14,6 +14,5 @@ Here is a table of contents for this tutorial:
 |4    | [Interacting With and Testing The Load Generator](tutorials/04-loadgenerator.md) |
 |5    | [Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator](tutorials/05-monitoring.md) |
 |6    | [Interacting With The Monitoring Stack](tutorials/06-monitoring-interaction.md) |
-|7    | Testing With The Horizontal Pod Autoscaler |
-|8    | Fetching Monitoring Data Using PromQL |
-|9    | Kubernetes API for Scaling Resources |
+|7    | [Kubernetes API for Scaling Resources](tutorials/07-kubernetes-api.md) |
+|8    | Testing With The Horizontal Pod Autoscaler |
