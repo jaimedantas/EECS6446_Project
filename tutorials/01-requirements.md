@@ -16,6 +16,7 @@ We also recommend the installation of the following extensions:
 - `Python` by `Microsoft`
 - `Jupyter` by `Microsoft`
 - `Kubernetes` by `Microsoft`
+- `Pylance` by `Microsoft`
 
 For this tutorial,
 imagine the provided ssh private and public key is stored in `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`
@@ -99,3 +100,15 @@ bash ~/miniconda.sh -b -p $HOME/miniconda
 # add bash hook for conda
 echo 'eval "$(~/miniconda/bin/conda shell.bash hook)"' >> ~/.bashrc && source ~/.bashrc
 ```
+
+After the installation is complete, you can test your installation using the following:
+
+```console
+$ conda --version
+conda 4.9.2
+```
+
+Next, connect to the master node using visual studio code and click on the
+`Select Python Interpreter` button on the bottom left corner of the window and
+select `Python 3.8.x 64-bit ('base': conda)` to use as the default python
+environment.
