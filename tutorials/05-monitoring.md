@@ -80,3 +80,4 @@ on Prometheus to get several metrics from our deployment. You may now proceed to
 - [Artifacthub: Kubernetes Prometheus Stack](https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack)
 - [Github: kube-prometheus-stack helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 - [Instructions on using Alert Manager and other CRDs](https://github.com/prometheus-operator/kube-prometheus)
+- [Prometheus API Python Client](https://pypi.org/project/prometheus-api-client/)
