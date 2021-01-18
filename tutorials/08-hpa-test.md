@@ -1,7 +1,7 @@
 # Testing With The Horizontal Pod Autoscaler
 
 Now that we have everything up and running, it is time to test the
-Kubernetes' built-in autosclaer called Horizontal Pod Autoscaler (HPA).
+Kubernetes' built-in autosclaer called [Horizontal Pod Autoscaler (HPA)](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/).
 
 
 Clone this project's git repository:
@@ -43,3 +43,9 @@ currencyservice         3/3     3            3           2d2h
 frontend                4/4     4            4           2d2h
 cartservice             1/1     1            1           2d2h
 ```
+
+## References
+
+- [Medium: Cluster Autoscaler and Horizontal Pod Autoscaler for on-premise Kubernetes Clusters](https://jonachin.medium.com/cluster-autoscaler-and-horizontal-pod-autoscaler-for-on-premise-kubernetes-clusters-b90cb54c262b)
+- [HPA Documentations](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
+- [HPA Algorithm Design](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)

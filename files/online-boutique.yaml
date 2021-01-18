@@ -495,10 +495,10 @@ spec:
           value: "10"
         resources:
           requests:
-            cpu: 300m
+            cpu: 500m
             memory: 256Mi
           limits:
-            cpu: 500m
+            cpu: 700m
             memory: 512Mi
 ---
 apiVersion: v1
