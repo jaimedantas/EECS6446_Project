@@ -80,21 +80,18 @@ class WorkerThread(threading.Thread):
                     for key in stats2:
                         stats["custom_" + str(key)] = stats2[key]
                 
-                if stats['state'] == 'running':
+                if stats['state'] == 'running' or stats['state'] == 'spawning':
                     if stats['stats'][0]['num_requests'] > 0:
-                        print('+', end='')
                         stats['time'] = time.time()
                         self.parent.temp_stats.append(stats)
-                        print(len(self.parent.temp_stats))
                         if len(self.parent.temp_stats) > self.parent.temp_stat_max_len:
-                            print('-', end='')
                             del self.parent.temp_stats[0]
                     else:
-                        print(stats)
-                        # sleep_time = 0.2
+                        print('stats no request found!')
+                        sleep_time = 0.5
                 else:
-                    print(stats)
-                    # sleep_time = 0.2
+                    print('Not running!')
+                    sleep_time = 0.5
             except Exception as e:
                 print('Got Exception: ' + str(e))
             elapsed = self.loop_timer.toc()
@@ -157,16 +154,18 @@ class PACSLoadTester:
             'current_response_time_average': get_stats_arr(temp_stats, 'current_response_time_average'),
             'current_max_response_time': get_stats_arr(temp_stats, 'current_max_response_time'),
             'current_min_response_time': get_stats_arr(temp_stats, 'current_min_response_time'),
+            'current_fail_per_sec': get_stats_arr_stats(temp_stats, 'current_fail_per_sec', index=-1), # array-based result, but current
             'fail_ratio': get_stats_arr(temp_stats, 'fail_ratio'),
             'total_rps': get_stats_arr(temp_stats, 'total_rps'),
             'user_count': get_stats_arr(temp_stats, 'user_count'),
-            'avg_response_time': get_stats_arr_stats(temp_stats, 'avg_response_time'),
-            'current_rps': get_stats_arr_stats(temp_stats, 'current_rps'),
-            'max_response_time': get_stats_arr_stats(temp_stats, 'max_response_time'),
-            'median_response_time': get_stats_arr_stats(temp_stats, 'median_response_time'),
-            'min_response_time': get_stats_arr_stats(temp_stats, 'min_response_time'),
-            'num_failures': get_stats_arr_stats(temp_stats, 'num_failures'),
-            'num_requests': get_stats_arr_stats(temp_stats, 'num_requests'),
+            # for array-based results, index of -1 is the aggregated results
+            'avg_response_time': get_stats_arr_stats(temp_stats, 'avg_response_time', index=-1),
+            'current_rps': get_stats_arr_stats(temp_stats, 'current_rps', index=-1),
+            'max_response_time': get_stats_arr_stats(temp_stats, 'max_response_time', index=-1),
+            'median_response_time': get_stats_arr_stats(temp_stats, 'median_response_time', index=-1),
+            'min_response_time': get_stats_arr_stats(temp_stats, 'min_response_time', index=-1),
+            'num_failures': get_stats_arr_stats(temp_stats, 'num_failures', index=-1),
+            'num_requests': get_stats_arr_stats(temp_stats, 'num_requests', index=-1),
         }
         
         stats2 = self.custom_sensing()
