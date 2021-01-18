@@ -15,4 +15,4 @@ Here is a table of contents for this tutorial:
 |5    | [Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator](tutorials/05-monitoring.md) |
 |6    | [Interacting With The Monitoring Stack](tutorials/06-monitoring-interaction.md) |
 |7    | [Kubernetes API for Scaling Resources](tutorials/07-kubernetes-api.md) |
-|8    | Testing With The Horizontal Pod Autoscaler |
+|8    | [Testing With The Horizontal Pod Autoscaler](tutorials/08-hpa-test.md) |
