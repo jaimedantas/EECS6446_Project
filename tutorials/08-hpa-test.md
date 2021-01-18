@@ -20,4 +20,26 @@ Resolving deltas: 100% (64/64), done.
 Use VS Code to open the jupyter notebook in the path `EECS6446_Project/notebooks/experiment.ipynb`.
 This notebook includes an integration of all the components we have deployed
 to our cluster and uses their respective APIs to get monitoring/actionable data.
+You can see a preview of the jupyter notebook on [GitHub](https://github.com/pacslab/EECS6446_Project/blob/main/notebooks/experiment.ipynb).
 
+While running the experiment, you can monitor the status of the deployments using provided
+interfaces as well as the commandline:
+
+```console
+$ watch kubectl get deploy
+Every 2.0s: kubectl get deploy                                             nima-ktest-eecs6446: Mon Jan 18 22:07:42 2021
+
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+redis-cart              1/1     1            1           2d2h
+shippingservice         1/1     1            1           2d2h
+paymentservice          1/1     1            1           2d2h
+emailservice            1/1     1            1           2d2h
+adservice               1/1     1            1           2d2h
+loadgenerator           1/1     1            1           2d2h
+productcatalogservice   2/2     2            2           2d2h
+checkoutservice         2/2     2            2           2d2h
+recommendationservice   3/3     3            3           2d2h
+currencyservice         3/3     3            3           2d2h
+frontend                4/4     4            4           2d2h
+cartservice             1/1     1            1           2d2h
+```

@@ -31,7 +31,7 @@ helm repo update
 kubectl create ns monitoring
 # install operator
 helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring \
-    --set prometheusSpec.scrapeInterval=20s
+    --set prometheus.prometheusSpec.scrapeInterval=10s
 # patch service to make it accessible
 kubectl patch svc/prometheus-kube-prometheus-prometheus -n monitoring --patch "$(curl -sSL https://raw.githubusercontent.com/pacslab/EECS6446_Project/main/files/prom-svc.yaml)"
 # patch grafana service to change it to port 3000

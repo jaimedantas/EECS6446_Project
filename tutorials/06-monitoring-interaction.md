@@ -83,7 +83,7 @@ To get the CPU usage for pods running in a `deployment` called `frontend` (for e
 
 ```promql
 sum(
-    rate(container_cpu_usage_seconds_total{cluster="", namespace="default"}[2m])
+    irate(container_cpu_usage_seconds_total{cluster="", namespace="default"}[2m])
   * on(namespace,pod)
     group_left(workload, workload_type) namespace_workload_pod:kube_pod_owner:relabel{cluster="", namespace="default", workload="frontend", workload_type="deployment"}
 ) by (pod)
@@ -107,11 +107,14 @@ sum(
 
 ## Get CPU Usage of All Deployments
 
-To get the total CPU usage of all `deployments` in the namespace `default`:
+To get the total CPU usage of all `deployments` in the namespace `default`, we can use the following query.
+Note that `irate` fetches the latest result, if you want the average cpu usage in the specified period,
+you need to use `rate` function. Check [PromQL documentation](https://prometheus.io/docs/prometheus/latest/querying/functions/)
+for more details.
 
 ```promql
 sum(
-  rate(container_cpu_usage_seconds_total{cluster="", namespace="default"}[2m])
+  irate(container_cpu_usage_seconds_total{cluster="", namespace="default"}[2m])
 * on(namespace,pod)
   group_left(workload, workload_type) namespace_workload_pod:kube_pod_owner:relabel{cluster="", namespace="default", workload_type="deployment"}
 ) by (workload, workload_type)
