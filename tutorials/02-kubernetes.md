@@ -106,6 +106,8 @@ source ~/.bashrc
 arkade get helm
 # k3sup
 arkade get k3sup
+# move kubectl to /usr/bin to allow it to be used in python later on
+sudo cp ~/.arkade/bin/kubectl /usr/bin/ && sudo chmod +x /usr/bin/kubectl
 ```
 
 Let's test our installation:

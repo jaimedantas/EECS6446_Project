@@ -108,7 +108,9 @@ $ conda --version
 conda 4.9.2
 ```
 
-Next, connect to the master node using visual studio code and click on the
+Next, connect to the master node using visual studio code.
+Then, open an empty file with `.py` extension to activate the python
+extension on VS Code and click on the
 `Select Python Interpreter` button on the bottom left corner of the window and
 select `Python 3.8.x 64-bit ('base': conda)` to use as the default python
 environment.
