@@ -17,6 +17,14 @@ Receiving objects: 100% (138/138), 4.73 MiB | 10.84 MiB/s, done.
 Resolving deltas: 100% (64/64), done.
 ```
 
+Before moving to our jupyter notebook, we need to install the dependencies of our
+experimentation script. To do so, you can run the following command:
+
+```sh
+cd EECS6446_Project/notebooks/
+pip install -r requirements.txt
+```
+
 Use VS Code to open the jupyter notebook in the path `EECS6446_Project/notebooks/experiment.ipynb`.
 This notebook includes an integration of all the components we have deployed
 to our cluster and uses their respective APIs to get monitoring/actionable data.
