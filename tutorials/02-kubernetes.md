@@ -177,7 +177,7 @@ k3sup install \
   --local \
   --k3s-channel stable \
   --local-path ~/.kube/config \
-  --k3s-extra-args "--node-external-ip $MASTER_IP --node-ip $MASTER_IP --no-deploy traefik --write-kubeconfig-mode 644" \
+  --k3s-extra-args "--node-external-ip $MASTER_IP --node-ip $MASTER_IP --bind-address $MASTER_IP --no-deploy traefik --write-kubeconfig-mode 644" \
   --print-command
 ```
 
