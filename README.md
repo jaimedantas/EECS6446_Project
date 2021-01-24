@@ -16,3 +16,8 @@ Here is a table of contents for this tutorial:
 |6    | [Interacting With The Monitoring Stack](tutorials/06-monitoring-interaction.md) |
 |7    | [Kubernetes API for Scaling Resources](tutorials/07-kubernetes-api.md) |
 |8    | [Testing With The Horizontal Pod Autoscaler](tutorials/08-hpa-test.md) |
+
+The contents of the this page can be found on [GitHub](https://github.com/pacslab/EECS6446_Project)
+or the [project web page](https://pacslab.github.io/EECS6446_Project/).
+If you run into issues, you can ask on the course's forum
+or [open an issue on GitHub](https://github.com/pacslab/EECS6446_Project/issues/new/choose).

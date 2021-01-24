@@ -29,6 +29,18 @@ throughout the tutorial.
 - TOC
 {:toc}
 
+## OpenVPN Connection
+
+To gain access to your VMs on our cloud, you will need to connect to our internal
+network. To do so, you can use OpenVPN Connect to connect using the profile provided
+to you. To use it, first download OpenVPN Connect from [their website](https://openvpn.net/download-open-vpn/). After the installation, you will be asked to create or import
+a connection configuration. To do so, select the `File` tab and drag the provided connection
+configuration onto OpenVPN Connect. Then, you will need to give the connection a name
+and will be able to connect to the VPN server.
+
+After connecting to the OpenVPN connection, you can try you connection by trying to
+ping the internal IP of the instances provided to you.
+
 ## SSH Access
 
 To ssh onto the master or worker, use the default `ubuntu` user:
