@@ -33,7 +33,7 @@ throughout the tutorial.
 
 To gain access to your VMs on our cloud, you will need to connect to our internal
 network. To do so, you can use OpenVPN Connect to connect using the profile provided
-to you. To use it, first download OpenVPN Connect from [their website](https://openvpn.net/download-open-vpn/). After the installation, you will be asked to create or import
+to you. To use it, first download `OpenVPN Connect` from [their website](https://openvpn.net/download-open-vpn/). After the installation, you will be asked to create or import
 a connection configuration. To do so, select the `File` tab and drag the provided connection
 configuration onto OpenVPN Connect. Then, you will need to give the connection a name
 and will be able to connect to the VPN server.
