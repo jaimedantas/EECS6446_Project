@@ -302,7 +302,7 @@ ktest2-eecs6446        Ready    <none>                 31s   v1.20.0+k3s2   10.1
 
 Notice the `Ready` status for both VMs.
 
-Now that our cluster is set up and ready to use, we can proceed to the next step. You can check
+Now that our cluster is set up and ready to use, we can proceed to the [next step](03-microservice.md). You can check
 out some of the most used `kubectl` commands on [their documentations](https://kubernetes.io/docs/reference/kubectl/overview/).
 You can also take a look at the [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 

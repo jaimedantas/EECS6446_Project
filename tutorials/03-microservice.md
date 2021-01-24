@@ -58,7 +58,7 @@ If everything has worked well, you will be able to open the online store
 deployed and see the load generator plots and statistics shown. We will later
 on use the load generator API to change the number of simulated users and
 query the quality of service statistics from the load generator. You are now
-ready to move on to the next step.
+ready to move on to the [next step](04-loadgenerator.md).
 
 ## References
 

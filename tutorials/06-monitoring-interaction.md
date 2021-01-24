@@ -139,3 +139,8 @@ sum(
 ```
 
 `Note:` This query returns the total memory usage for each deployment, not the memory usage per pod.
+
+## Wrap Up and Next Steps
+
+Now that you have achieved a better understanding of the monitoring stack on our
+cluster, you may proceed to our [next step where we talk about the Kubernetes API](07-kubernetes-api.md).

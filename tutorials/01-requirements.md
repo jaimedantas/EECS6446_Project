@@ -38,7 +38,7 @@ a connection configuration. To do so, select the `File` tab and drag the provide
 configuration onto OpenVPN Connect. Then, you will need to give the connection a name
 and will be able to connect to the VPN server.
 
-After connecting to the OpenVPN connection, you can try you connection by trying to
+After connecting to the OpenVPN connection, you can try your connection by trying to
 ping the internal IP of the instances provided to you.
 
 ## SSH Access
@@ -126,3 +126,7 @@ extension on VS Code and click on the
 `Select Python Interpreter` button on the bottom left corner of the window and
 select `Python 3.8.x 64-bit ('base': conda)` to use as the default python
 environment.
+
+Now that we have done our initialization step, you are ready to install
+Kubernetes and other required tools on your cluster. To do so, please move
+on to the [next step](02-kubernetes.md).
