@@ -235,7 +235,9 @@ for windows, or run the following for MacOS and Linux:
 curl -sLS https://get.k3sup.dev | sudo sh
 ```
 
-Next, you need to have the `worker node` join your kubernetes cluster (replace the master and worker IPs):
+Next, you need to have the `worker nodes` join your kubernetes cluster. Run the following
+commands on your laptop (replace the master and worker IPs). Make sure to repeat this process
+for every worker node in the cluster.
 
 ```sh
 # master information
@@ -300,7 +302,8 @@ ktest-eecs6446         Ready    control-plane,master   20m   v1.20.0+k3s2   10.1
 ktest2-eecs6446        Ready    <none>                 31s   v1.20.0+k3s2   10.1.1.2        10.1.1.2        Ubuntu 20.04.1 LTS   5.4.0-56-generic   containerd://1.4.3-k3s1
 ```
 
-Notice the `Ready` status for both VMs.
+Notice the `Ready` status for both VMs. Repeat this process for all `worker` VMs to have the
+cluster ready.
 
 Now that our cluster is set up and ready to use, we can proceed to the [next step](03-microservice.md). You can check
 out some of the most used `kubectl` commands on [their documentations](https://kubernetes.io/docs/reference/kubectl/overview/).
@@ -309,3 +312,7 @@ You can also take a look at the [kubectl cheatsheet](https://kubernetes.io/docs/
 ## References
 
 - [Medium: The Ultimate Guide to Building Your Personal K3S Cluster](https://itnext.io/the-ultimate-guide-to-building-your-personal-k3s-cluster-bf2643f31dd3)
+- [Kubernetes basics tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+- [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
+- [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/overview/)
+- [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

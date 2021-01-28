@@ -5,25 +5,18 @@ need access to a cloud computing infrastructure or a set of Virtual Machines (VM
 Make sure that you have ssh access to those resources and that you are comfortable
 using the `bash` to interact with the server before you continue this tutorial.
 
-The easiest way to interact with your virtual machine is using Visual Studio Code 
-Remote Development via SSH. To use this feature, you need to install the
-[Visual Studio Code](https://code.visualstudio.com/) and the [Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)
-extension. You can follow the VSCode tutorials to connect to the `master VM` to follow with the
-tutorials. The VMs used in this tutorial need to be a debian-based distribution and would
-preferably be `Ubuntu 18.04` or `Ubuntu 20.04` with the standard `bash`.
-We also recommend the installation of the following extensions:
-
-- `Python` by `Microsoft`
-- `Jupyter` by `Microsoft`
-- `Kubernetes` by `Microsoft`
-- `Pylance` by `Microsoft`
-
 For this tutorial,
 imagine the provided ssh private and public key is stored in `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`
 and thus will automatically be used for ssh communications (in case you had the keys stored in a
-different location, you need to use the `-i` option for all ssh commands). Also, assume the ip of
+different location, you need to use the `-i` option for all ssh commands).
+To set up a Kubernetes cluster, we will need different VMs to take `master` and `worker` roles.
+`master` nodes will be responsible for keeping the cluster running and scheduling resources on available
+nodes while `worker` nodes will be responsible for running those workloads.
+You will need to assume one of the VMs assigned to you as the `master`, and the rest as `worker`s.
+Here, we assume the ip of
 the provided VMs are `10.1.1.1` (master) and `10.1.1.2` (worker). We will be using these assumptions
-throughout the tutorial.
+throughout the tutorial. If you have more than one `worker` VM, repeat the worker VM commands for
+all of your VMs.
 
 **Table of Contents**
 - TOC
@@ -48,11 +41,26 @@ To ssh onto the master or worker, use the default `ubuntu` user:
 ```sh
 # ssh onto the master
 $ ssh ubuntu@10.1.1.1
-# ssh onto the slave
+# ssh onto the worker
 $ ssh ubuntu@10.1.1.2
 # ssh onto master with another ssh key
-$ ssh ubuntu@10.1.1.1 -i ~/.ssh/my_other_ssh_key
+$ ssh ubuntu@10.1.1.1 -i /PATH/TO/SSHKEY
 ```
+
+## Visual Studio Code
+
+The easiest way to interact with your virtual machine is using Visual Studio Code 
+Remote Development via SSH. To use this feature, you need to install the
+[Visual Studio Code](https://code.visualstudio.com/) and the [Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh)
+extension. You can follow the VSCode tutorials to connect to the `master VM` to follow with the
+tutorials. The VMs used in this tutorial need to be a debian-based distribution and would
+preferably be `Ubuntu 18.04` or `Ubuntu 20.04` with the standard `bash`.
+We also recommend the installation of the following extensions:
+
+- `Python` by `Microsoft`
+- `Jupyter` by `Microsoft`
+- `Kubernetes` by `Microsoft`
+- `Pylance` by `Microsoft`
 
 ## Initial Setup
 
@@ -71,7 +79,8 @@ is network connectivity between your VMs by checking their `ping` status.
 (master) $ ping 10.1.1.2
 ```
 
-You should see an output like this:
+Make sure to replace `10.1.1.2` with your worker VM IPs.
+With successful connectivity between your VMs, you should see an output like this:
 
 ```console
 PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
@@ -87,12 +96,13 @@ PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
 
 ## Firewall Configurations
 
-In case you needed to do firewall configurations yourself, open the following ports:
+The firewall configuration has be done for you, but generally we need the following
+ports to be open for this tutorial to work:
 
 - `TCP` port `6443` for Kubernetes API
-- `UDP` port `8472` for Flannel VXLAN
+- `UDP` port `8472` for Flannel VXLAN (Kubernetes CNI)
 - `TCP` port `10250` for kubelet
-- `TCP` port `80` for the application
+- `TCP` port `80` for the web application
 - `TCP` port `9090` for prometheus
 - `TCP` port `8091` for locust
 - `TCP` port `3000` for grafana
