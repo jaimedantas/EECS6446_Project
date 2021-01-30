@@ -1,4 +1,4 @@
-# Phase 1 Evaluation (15%)
+# Phase 1: Submission and Evaluation (15%)
 
 By the end of this tutorial you should have a kubernetes cluster up and
 running, our microservice application deployed, a functional monitoring stack,
