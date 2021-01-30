@@ -1,11 +1,12 @@
 # EECS6446 Project
 
-Welcome to `EECS6446` autoscaling project. In the first phase of this project, you will deploy a sample
-microservice-based application on a `Kubernetes` cluster dedicated to you and create
-autoscaling strategies to handle flactuations in workload applied to the cluster.
+Welcome to `EECS6446` course project. In the first phase of this project, you will deploy a sample
+application based on microservice architecture on a `Kubernetes` cluster. Then you exercise various
+autoscaling strategies to handle/investigate flactuations in the applied workload to your cluster.
 
 We provided a complete walk-through of all steps mentioned below here: [Phase 1 Tutorial](https://youtu.be/DKAhQk7W1Rw).
-There are several references in each part of the tutorial which can help you gain a deeper
+
+There are several references in each part of the tutorial to help you with gaining a deeper
 understanding of the elements/concepts used in that part.
 
 Here is the table of contents for phase 1:
@@ -15,13 +16,12 @@ Here is the table of contents for phase 1:
 |1    | [Requirements, SSH, and Initial Setup](tutorials/01-requirements.md) |
 |2    | [Installation of Kubernetes, Kubectl, and Other Tools](tutorials/02-kubernetes.md) |
 |3    | [Microservice Deployment](tutorials/03-microservice.md) |
-|4    | [Interacting With and Testing The Load Generator](tutorials/04-loadgenerator.md) |
-|5    | [Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator](tutorials/05-monitoring.md) |
-|6    | [Interacting With The Monitoring Stack](tutorials/06-monitoring-interaction.md) |
+|4    | [Interacting with and Testing the Load Generator](tutorials/04-loadgenerator.md) |
+|5    | [Deploying Monitoring Stack using Prometheus, Grafana, and Prometheus Operator](tutorials/05-monitoring.md) |
+|6    | [Interacting with the Monitoring Stack](tutorials/06-monitoring-interaction.md) |
 |7    | [Kubernetes API for Scaling Resources](tutorials/07-kubernetes-api.md) |
-|8    | [Testing With The Horizontal Pod Autoscaler](tutorials/08-hpa-test.md) |
-|9    | [Phase 1 Evaluation](tutorials/09-phase1-evaluation.md) |
+|8    | [Testing the Horizontal Pod Autoscaler](tutorials/08-hpa-test.md) |
+|9    | [How your work will be evaluated?](tutorials/09-phase1-evaluation.md) |
 
-The contents of the this page can be found on [GitHub](https://github.com/pacslab/EECS6446_Project).
-If you run into issues, you can ask on the course's forum
+Should you have any question or issue, please post them in the course's forum or
 or [open an issue on GitHub](https://github.com/pacslab/EECS6446_Project/issues/new/choose).
