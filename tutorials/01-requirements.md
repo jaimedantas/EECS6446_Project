@@ -141,4 +141,4 @@ environment.
 Now that we have done our initialization step, you are ready to install
 Kubernetes and other required tools on your cluster. 
 
-To do so, please move to the [Next Step](02-kubernetes.md).
+[Next Step](02-kubernetes.md) -->
