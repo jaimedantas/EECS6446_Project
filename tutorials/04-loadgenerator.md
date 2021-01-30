@@ -57,4 +57,4 @@ The result will be a json similar to the following:
 
 We will be using this API later to apply different user sequences to the system.
 
-Now that we have started our load generator, you are ready to move on to the [next step](05-monitoring.md).
+[Next Step](05-monitoring.md) -->
