@@ -1,14 +1,14 @@
 # EECS6446 Project
 
-Welcome to `EECS6446` autoscaling project. In this project you will deploy a sample
+Welcome to `EECS6446` autoscaling project. In the first phase of this project, you will deploy a sample
 microservice-based application on a `Kubernetes` cluster dedicated to you and create
-autoscaling strategies to handle changes in load applied to the cluster.
+autoscaling strategies to handle flactuations in workload applied to the cluster.
 
-You can watch a walk-through of the project setup on [Youtube](https://youtu.be/DKAhQk7W1Rw).
+We provided a complete walk-through of all steps mentioned below here: [Phase 1 Tutorial](https://youtu.be/DKAhQk7W1Rw).
 There are several references in each part of the tutorial which can help you gain a deeper
-understanding of the elements used in that step.
+understanding of the elements/concepts used in that part.
 
-Here is a table of contents for this tutorial:
+Here is the table of contents for phase 1:
 
 | No. | Topic |
 |-----|-------|
