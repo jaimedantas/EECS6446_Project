@@ -2,8 +2,7 @@
 
 [Kubernetes](https://kubernetes.io/), also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 In recent years, it has become the de-facto standard for cluster management in the cloud. We will be using kubernetes to manage our infrastructure and deploy
-our applications. In this section of the tutorial, you will learn to deploy kubernetes to a create a cluster of VMs that can be managed from a single point
-which is the master node.
+our applications. In this section of the tutorial, you will learn to deploy kubernetes to a create a cluster comprising of VMs that can be managed from a single point which is the master node.
 
 **Table of Contents**
 - TOC
