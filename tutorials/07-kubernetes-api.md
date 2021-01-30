@@ -57,8 +57,7 @@ set_replica_num(3,'frontend')
 You probably won't need to use other Kubernetes APIs for this project, but in
 case you were interested, you can check out [their documentation](https://github.com/kubernetes-client/python/blob/master/kubernetes/README.md).
 
-Now that we have set up Kubernetes API and we have learned how to interact with
-it, you may proceed to the [next step](08-hpa-test.md).
+[Next Step](08-hpa-test.md) -->
 
 ## References
 
