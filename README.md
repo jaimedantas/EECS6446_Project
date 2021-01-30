@@ -23,5 +23,5 @@ Here is the table of contents for phase 1:
 |8    | [Testing the Horizontal Pod Autoscaler](tutorials/08-hpa-test.md) |
 |9    | [How your work will be evaluated?](tutorials/09-phase1-evaluation.md) |
 
-Should you have any question or issue, please post them in the course's forum or
+Should you have any question or issue, please post them in the course's forum
 or [open an issue on GitHub](https://github.com/pacslab/EECS6446_Project/issues/new/choose).
