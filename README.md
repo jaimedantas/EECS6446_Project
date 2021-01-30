@@ -8,8 +8,8 @@ autoscaling strategies to handle/investigate flactuations in the applied workloa
 In fact, the first phase of the project is like a tutorial that you need to follow the steps mentioned in 
 the below table. We also provided a complete walk-through of all steps here: [Phase 1 Tutorial](https://youtu.be/DKAhQk7W1Rw).
 
-There are several references in each part of the tutorial to help you gain a deeper
-understanding of the elements and concepts in each part.
+At the end of each step, you will see a list of references that may help you gain a better
+understanding of the elements and concepts in that part.
 
 Here is the table of contents for phase 1:
 
