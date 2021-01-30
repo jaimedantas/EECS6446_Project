@@ -1,4 +1,4 @@
-# EECS6446 Performance Modelling of Computing Systems
+# EECS6446: Performance Modelling of Computing Systems
 ## Project - Phase 1
 
 Welcome to `EECS6446` course project. In the first phase of this project, you will deploy a sample
