@@ -1,4 +1,4 @@
-# Interacting With and Testing The Load Generator
+# Interacting and Testing the Load Generator
 
 As previously mentioned, for this project we deployed a load generator
 along with out application to simulate users interacting with the deployed
