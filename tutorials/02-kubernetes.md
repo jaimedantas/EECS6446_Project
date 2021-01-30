@@ -305,6 +305,8 @@ Now that our cluster is set up and ready to use, we can proceed to the [next ste
 out some of the most used `kubectl` commands on [their documentations](https://kubernetes.io/docs/reference/kubectl/overview/).
 You can also take a look at the [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 
+[Next Step](03-microservice.md) -->
+
 ## References
 
 - [Medium: The Ultimate Guide to Building Your Personal K3S Cluster](https://itnext.io/the-ultimate-guide-to-building-your-personal-k3s-cluster-bf2643f31dd3)
