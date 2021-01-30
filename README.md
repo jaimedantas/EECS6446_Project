@@ -18,7 +18,7 @@ Here is the table of contents for phase 1:
 |1    | [Requirements, SSH, and Initial Setup](tutorials/01-requirements.md) |
 |2    | [Installation of Kubernetes, Kubectl, and Other Tools](tutorials/02-kubernetes.md) |
 |3    | [Microservice Deployment](tutorials/03-microservice.md) |
-|4    | [Interacting with and Testing the Load Generator](tutorials/04-loadgenerator.md) |
+|4    | [Interacting and Testing the Load Generator](tutorials/04-loadgenerator.md) |
 |5    | [Deploying Monitoring Stack using Prometheus, Grafana, and Prometheus Operator](tutorials/05-monitoring.md) |
 |6    | [Interacting with the Monitoring Stack](tutorials/06-monitoring-interaction.md) |
 |7    | [Kubernetes API for Scaling Resources](tutorials/07-kubernetes-api.md) |
