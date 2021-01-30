@@ -1,49 +1,50 @@
 # Requirements
 
 To move along this tutorial and set up the required tools and applications, you will
-need access to a cloud computing infrastructure or a set of Virtual Machines (VMs).
+need access to a cloud computing infrastructure including a set of Virtual Machines (VMs).
+You should have already received an email containing above information.
 Make sure that you have ssh access to those resources and that you are comfortable
 using the `bash` to interact with the server before you continue this tutorial.
 
 For this tutorial,
 imagine the provided ssh private and public key is stored in `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`
-and thus will automatically be used for ssh communications (in case you had the keys stored in a
-different location, you need to use the `-i` option for all ssh commands).
+and thus will automatically be used for ssh communications; in case you stored the keys in a
+different location, you need to use the `-i` option for all ssh commands, like below:
+
+`# ssh username@ip_address -i private_key`
+
 To set up a Kubernetes cluster, we will need different VMs to take `master` and `worker` roles.
 `master` nodes will be responsible for keeping the cluster running and scheduling resources on available
 nodes while `worker` nodes will be responsible for running those workloads.
-You will need to assume one of the VMs assigned to you as the `master`, and the rest as `worker`s.
-Here, we assume the ip of
-the provided VMs are `10.1.1.1` (master) and `10.1.1.2` (worker). We will be using these assumptions
-throughout the tutorial. If you have more than one `worker` VM, repeat the worker VM commands for
-all of your VMs.
+You will need to specify one of the VMs assigned to you as the `master`, and the rest as `worker`s.
+Throughout this tutorial, we assume a cluster of two nodes including a `master` with ip equal to `10.1.1.1` 
+and a worker with ip of `10.1.1.2`. 
+If you have more than one `worker` VM, repeat the worker VM commands for all other `workers`.
 
-**Table of Contents**
-- TOC
-{:toc}
 
 ## OpenVPN Connection
 
 To gain access to your VMs on our cloud, you will need to connect to our internal
-network. To do so, you can use OpenVPN Connect to connect using the profile provided
-to you. To use it, first download `OpenVPN Connect` from [their website](https://openvpn.net/download-open-vpn/). After the installation, you will be asked to create or import
+network. To do so, you can use OpenVPN Connect to connect using the configuration file provided
+to you. To use it, first download `OpenVPN Connect` from [their website](https://openvpn.net/download-open-vpn/). 
+After the installation, you will be asked to create or import
 a connection configuration. To do so, select the `File` tab and drag the provided connection
 configuration onto OpenVPN Connect. Then, you will need to give the connection a name
 and will be able to connect to the VPN server.
 
-After connecting to the OpenVPN connection, you can try your connection by trying to
-ping the internal IP of the instances provided to you.
+After connecting to the OpenVPN connection, you can test your connection by pinging the internal IP addresses
+of the instances provided to you.
 
 ## SSH Access
 
 To ssh onto the master or worker, use the default `ubuntu` user:
 
 ```sh
-# ssh onto the master
+# ssh to the master
 $ ssh ubuntu@10.1.1.1
-# ssh onto the worker
+# ssh to the worker
 $ ssh ubuntu@10.1.1.2
-# ssh onto master with another ssh key
+# ssh to master if the private ssh key is not stored in the default place
 $ ssh ubuntu@10.1.1.1 -i /PATH/TO/SSHKEY
 ```
 
@@ -64,7 +65,7 @@ We also recommend the installation of the following extensions:
 
 ## Initial Setup
 
-First, we need to make sure to update all packages installed on all VMs:
+First, we need to update all packages installed on all VMs:
 
 ```sh
 # update the package list and upgrade installed packages on all machines
@@ -75,12 +76,12 @@ In case you will be using more than one VM for your cluster, make sure that ther
 is network connectivity between your VMs by checking their `ping` status.
 
 ```sh
-# ssh onto the master and check connectivity with the workers
+# ssh to the master and check connectivity with the workers
 (master) $ ping 10.1.1.2
 ```
 
 Make sure to replace `10.1.1.2` with your worker VM IPs.
-With successful connectivity between your VMs, you should see an output like this:
+You should see an output like this:
 
 ```console
 PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
@@ -96,8 +97,8 @@ PING 10.1.1.2 (10.1.1.2) 56(84) bytes of data.
 
 ## Firewall Configurations
 
-The firewall configuration has be done for you, but generally we need the following
-ports to be open for this tutorial to work:
+The firewall configuration has been already done on your VMs, but generally we need the following
+ports to be open for this tutorial:
 
 - `TCP` port `6443` for Kubernetes API
 - `UDP` port `8472` for Flannel VXLAN (Kubernetes CNI)
@@ -138,5 +139,6 @@ select `Python 3.8.x 64-bit ('base': conda)` to use as the default python
 environment.
 
 Now that we have done our initialization step, you are ready to install
-Kubernetes and other required tools on your cluster. To do so, please move
-on to the [next step](02-kubernetes.md).
+Kubernetes and other required tools on your cluster. 
+
+To do so, please move to the [Next Step](02-kubernetes.md).
