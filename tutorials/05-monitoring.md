@@ -13,9 +13,6 @@ use the deployment outlined in this tutorial to deploy the monitoring infrastruc
 - [How Prometheus Monitoring works - Prometheus Architecture explained](https://youtu.be/h4Sl21AKiDg)
 - [Setup Prometheus Monitoring on Kubernetes using Helm and Prometheus Operator](https://youtu.be/QoDqxm7ybLc)
 
-**Table of Contents**
-- TOC
-{:toc}
 
 ## Helm Installation
 
