@@ -1,4 +1,4 @@
-# Interacting With The Monitoring Stack
+# Interacting with the Monitoring Stack
 
 In this section, we will learn to run some queries on Prometheus to get some of the monitoring
 data about our deployment. You can run the following queries in the Prometheus ui
