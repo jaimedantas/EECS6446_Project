@@ -6,10 +6,6 @@ developed by Google to demonstrate the capabilities of microservice deployment
 and their kubernetes engine. To know more about the architecture of Online Boutique,
 check out [their documentation](https://github.com/GoogleCloudPlatform/microservices-demo#architecture). You can see a running version of this application [here](https://onlineboutique.dev/).
 
-**Table of Contents**
-- TOC
-{:toc}
-
 ## Screenshots
 
 | Home Page                                                                                                         | Checkout Screen                                                                                                    |
@@ -57,8 +53,9 @@ Note that you need to replace `MASTER_IP` with the IP of your master node.
 If everything has worked well, you will be able to open the online store
 deployed and see the load generator plots and statistics shown. We will later
 on use the load generator API to change the number of simulated users and
-query the quality of service statistics from the load generator. You are now
-ready to move on to the [next step](04-loadgenerator.md).
+query the quality of service statistics from the load generator. 
+
+[Next Step](04-loadgenerator.md) -->
 
 ## References
 
