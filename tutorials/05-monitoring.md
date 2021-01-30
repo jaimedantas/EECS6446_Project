@@ -1,4 +1,4 @@
-# Deploying monitoring stack using Prometheus, Grafana, and Prometheus Operator
+# Deploying Monitoring Stack using Prometheus, Grafana, and Prometheus Operator
 
 To make good and reasonable autoscaling decisions, we need observability and
 monitoring on our infrastructure. In this section, you will be deploying a
