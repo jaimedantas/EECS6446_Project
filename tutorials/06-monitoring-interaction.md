@@ -6,10 +6,6 @@ which can be accessed on `http://MASTER_IP:9090`. You can check [this tutorial](
 and [the official docs](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 for an introduction to PromQL, the querying language used by Prometheus.
 
-**Table of Contents**
-- TOC
-{:toc}
-
 ## Get a List of Deployments
 
 You will need to perform autoscaling actions on several microservices and `deployment` on our deployed application.
@@ -140,7 +136,4 @@ sum(
 
 `Note:` This query returns the total memory usage for each deployment, not the memory usage per pod.
 
-## Wrap Up and Next Steps
-
-Now that you have achieved a better understanding of the monitoring stack on our
-cluster, you may proceed to our [next step where we talk about the Kubernetes API](07-kubernetes-api.md).
+[Next Step](07-kubernetes-api.md) -->
