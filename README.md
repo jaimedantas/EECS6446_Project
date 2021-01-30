@@ -3,7 +3,7 @@
 
 Welcome to `EECS6446` course project. In the first phase of this project, you will deploy a sample
 application based on microservice architecture on a `Kubernetes` cluster. Then you exercise various
-autoscaling strategies to handle/investigate flactuations in the applied workload to your cluster.
+pre-defined autoscaling strategies to handle/investigate flactuations in the applied workload to your cluster.
 
 In fact, the first phase of the project is like a tutorial that you need to follow the steps mentioned in 
 the below table. We also provided a complete walk-through of all steps here: [Phase 1 Tutorial](https://youtu.be/DKAhQk7W1Rw).
