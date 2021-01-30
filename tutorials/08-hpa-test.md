@@ -1,4 +1,4 @@
-# Testing With The Horizontal Pod Autoscaler
+# Testing the Horizontal Pod Autoscaler
 
 Now that we have everything up and running, it is time to test the
 Kubernetes' built-in autosclaer called [Horizontal Pod Autoscaler (HPA)](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/).
