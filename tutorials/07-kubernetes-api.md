@@ -56,14 +56,14 @@ set_replica_num(3,'frontend')
 
 ## Using the Kubernetes API from Your Remote Machine
 
-If you want to interact with your cluster using your computer, you need to make sure that the Kubernetes you installed on your computer has the correct configuration to connect to your remote cluster. Kubernetes uses a `kubeconfig` file to organize information about clusters, users, namespaces, and authentication mechanisms. This file is located in the `$HOME/.kube` and is named `config`. 
+If you want to interact with your cluster using your computer, you need to make sure that the Kubernetes you installed on your computer has the correct configuration to connect to your remote cluster. Kubernetes uses a `kubeconfig` file to organize information about clusters, users, namespaces, and authentication mechanisms. This file is located in the `$HOME/.kube` directory and is named `config`. 
 
 In order to create a configuration file for your local Kuberneters, you need to follow these steps:
-1. Go to your master node and copy the `config` file. You can use the cp command if `cat` command to display the file content and then copying it.
+1. Go to your master node and copy the `config` file. You can use the  `cat` command to displaying the file's content and then copying it.
 ```sh
 cat ~/.kube/config
 ```
-2. On your local machine, create a file named `config` in the Kubernetes configuration directory.
+2. On your local machine, create a file named `config` in the Kubernetes configuration directory using `vim` or `nano`.
 ```sh
 vim ~/.kube/config
 ```
@@ -94,11 +94,7 @@ frontend-6b64dc9665-lztxf                1/1       Running   0          19h
 svclb-frontend-external-gj4h8            1/1       Running   0          2h
 svclb-loadgenerator-82hdk                1/1       Running   0          2h
 ```
-Please note that you will still need to install [Python client library for kubernetes](https://github.com/kubernetes-client/python/) on your machine to use the Kubernetes API locally.
-
-to view the configuration
-Go to your windows machine and create a file named config in the directory ~/.kube
-Copy the content of the file from the master in this new file you just created
+Please note that you still need to install the [Python client library for kubernetes](https://github.com/kubernetes-client/python/) on your local machine to use the Kubernetes API locally.
 
 You probably won't need to use other Kubernetes APIs for this project, but in
 case you were interested, you can check out [their documentation](https://github.com/kubernetes-client/python/blob/master/kubernetes/README.md).
