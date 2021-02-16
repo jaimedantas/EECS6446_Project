@@ -54,6 +54,52 @@ Similarly, to set the number of pods in `frontend` deployment to 3, we can use:
 set_replica_num(3,'frontend')
 ```
 
+## Using the Kubernetes API from Your Remote Machine
+
+If you want to interact with your cluster using your computer, you need to make sure that the Kubernetes you installed on your computer has the correct configuration to connect to your remote cluster. Kubernetes uses a `kubeconfig` file to organize information about clusters, users, namespaces, and authentication mechanisms. This file is located in the `$HOME/.kube` and is named `config`. 
+
+In order to create a configuration file for your local Kuberneters, you need to follow these steps:
+1. Go to your master node and copy the `config` file. You can use the cp command if `cat` command to display the file content and then copying it.
+```sh
+cat ~/.kube/config
+```
+2. On your local machine, create a file named `config` in the Kubernetes configuration directory.
+```sh
+vim ~/.kube/config
+```
+3. Paste the content of the `config` file you copied from the master node. 
+
+To check if your Kubernetes is pointing to the remote cluster, run the following command.
+```sh
+$ kubectl get pods
+NAME                                     READY     STATUS    RESTARTS   AGE
+svclb-loadgenerator-rn28h                1/1       Running   0          22h
+svclb-frontend-external-g5g6s            1/1       Running   0          22h
+productcatalogservice-7f857c47f-5pbml    1/1       Running   0          22h
+frontend-6b64dc9665-l28tx                1/1       Running   0          22h
+svclb-frontend-external-g6gxx            1/1       Running   0          22h
+svclb-loadgenerator-468hz                1/1       Running   0          22h
+shippingservice-75f7f9dc6c-wcwqs         1/1       Running   0          22h
+paymentservice-98cb47fff-rcq4t           1/1       Running   0          22h
+redis-cart-74594bd569-42wwm              1/1       Running   0          22h
+checkoutservice-85d4b74f95-f7487         1/1       Running   0          22h
+currencyservice-6d7f8fc9fc-szsmt         1/1       Running   0          22h
+emailservice-798f4f5575-z4tsn            1/1       Running   0          22h
+recommendationservice-5bf5bcbbdf-dwlkt   1/1       Running   0          22h
+cartservice-675b6659c8-jkxbz             1/1       Running   1          22h
+adservice-5f6f7c76f5-jtlxk               1/1       Running   0          22h
+loadgenerator-b76b4568d-xh457            1/1       Running   4          22h
+frontend-6b64dc9665-vz5sx                1/1       Running   0          19h
+frontend-6b64dc9665-lztxf                1/1       Running   0          19h
+svclb-frontend-external-gj4h8            1/1       Running   0          2h
+svclb-loadgenerator-82hdk                1/1       Running   0          2h
+```
+Please note that you will still need to install [Python client library for kubernetes](https://github.com/kubernetes-client/python/) on your machine to use the Kubernetes API locally.
+
+to view the configuration
+Go to your windows machine and create a file named config in the directory ~/.kube
+Copy the content of the file from the master in this new file you just created
+
 You probably won't need to use other Kubernetes APIs for this project, but in
 case you were interested, you can check out [their documentation](https://github.com/kubernetes-client/python/blob/master/kubernetes/README.md).
 
